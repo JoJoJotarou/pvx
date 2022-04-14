@@ -86,8 +86,6 @@ class GroupCommands(click.Group):
 
         # get group options
         options = self.get_params(ctx)
-        # PVX usage
-        # rv = self.collect_usage_pieces(ctx)
         if len(options) > 0:
             options_table = Table(highlight=True, box=None, show_header=False)
 
@@ -101,9 +99,7 @@ class GroupCommands(click.Group):
                     title_align="left",
                 )
             )
-        # else:
-        #     rv.remove("[OPTIONS]")
-        # console.print(ctx.command_path + " " + " ".join(rv) + " [OPTIONS]" + "\n")
+        # PVX usage
         console.print(" ".join([ctx.command_path, "[ARGS]", "[OPTIONS]", "\n"]))
 
         # commands and options
@@ -123,7 +119,7 @@ class GroupCommands(click.Group):
                 box=None,
                 show_header=False,
                 title="[sea_green3]Options[/]",
-                padding=(0, 0, 1, 0),
+                padding=(0, 1, 1, 1),
             )
 
             command_args = []
