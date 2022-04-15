@@ -7,6 +7,20 @@ Python version &amp; venv management (maybe more ...)
 
 ![pvx-commands-help](./asset/pvx-commands-help.png)
 
+## 📦 Install
+
+- Use pipx (recommend)
+
+    ```bash
+    pipx install pvx
+    ```
+
+- Use pip
+
+    ```bash
+    pip install pvx
+    ```
+
 ## 🔧 Usage
 
 - List  version number that you can download.
@@ -50,6 +64,9 @@ Python version &amp; venv management (maybe more ...)
 
     # Use venv's parameters, such as specifying prompt
     pvx venv new 3.10.4 --prompt venv_prompt_name
+
+    # Use current python and venv's parameters
+    pvx venv new --prompt venv_prompt_name
     ```
 
 - List all virtual environments
