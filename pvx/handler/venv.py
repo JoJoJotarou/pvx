@@ -6,7 +6,7 @@ from typing import List
 
 from rich.status import Status
 from rich.table import Table
-from tools import utils
+from pvx.tools import utils
 
 
 class Venv(object):

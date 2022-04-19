@@ -1,11 +1,11 @@
 import click
-from env import PVX_PYTHON_INSTALLATION_PATH
-from handler.py import PyInstallationStatus, pyHandler
+from pvx.env import PVX_PYTHON_INSTALLATION_PATH
+from pvx.handler.py import PyInstallationStatus, pyHandler
 from rich.prompt import Confirm
-from tools.rich_pvx_console import console, pvx_hint_color
-from tools.utils import join_path
+from pvx.tools.rich_pvx_console import console, pvx_hint_color
+from pvx.tools.utils import join_path
 
-import commands.py_help as help
+import pvx.commands.py_help as help
 
 
 @click.command("remove")

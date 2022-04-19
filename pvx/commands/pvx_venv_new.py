@@ -3,18 +3,18 @@ import sys
 from pathlib import Path
 
 import click
-from env import (
+from pvx.env import (
     PVX_PYTHON_INSTALLATION_PATH,
     PVX_VENV_PATH,
     PVX_VENV_IN_PROJECT,
     PVX_VENV_DIR_NAME_IN_PROJECT,
 )
-from handler.py import pyHandler
-from handler.venv import venvHandler
-from tools.rich_pvx_console import console, pvx_hint_color
-from tools.utils import join_path
+from pvx.handler.py import pyHandler
+from pvx.handler.venv import venvHandler
+from pvx.tools.rich_pvx_console import console, pvx_hint_color
+from pvx.tools.utils import join_path
 
-from commands import py_help
+from pvx.commands import py_help
 
 
 def get_venv_dir_name(py_path) -> str:

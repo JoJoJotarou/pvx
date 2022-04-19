@@ -5,7 +5,7 @@ from pathlib import Path
 from time import sleep
 from typing import List, Tuple
 
-from tools import utils
+from pvx.tools import utils
 
 
 class PyInstallationStatus(Enum):

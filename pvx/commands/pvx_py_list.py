@@ -1,9 +1,9 @@
 import click
 
-from tools.rich_pvx_console import console
-from handler.py import pyHandler
-import commands.py_help as help
-from env import PVX_PYTHON_INSTALLATION_PATH
+from pvx.tools.rich_pvx_console import console
+from pvx.handler.py import pyHandler
+import pvx.commands.py_help as help
+from pvx.env import PVX_PYTHON_INSTALLATION_PATH
 
 
 @click.command("list")

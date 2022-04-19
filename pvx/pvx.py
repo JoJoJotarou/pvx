@@ -229,7 +229,7 @@ class Registry:
     def get_command(self, filename: str):
 
         try:
-            mod = __import__(f"commands.{filename}", None, None, ["cli"])
+            mod = __import__(f"pvx.commands.{filename}", None, None, ["cli"])
         except ImportError as e:
             print(e)
             return None

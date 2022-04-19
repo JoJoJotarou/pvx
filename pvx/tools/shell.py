@@ -4,7 +4,7 @@ from typing import Tuple
 
 import pexpect
 
-from tools.terminal import Terminal
+from pvx.tools.terminal import Terminal
 
 
 class ShellType(Enum):

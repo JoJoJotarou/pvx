@@ -1,11 +1,11 @@
 from pathlib import Path
 
 import click
-from env import PVX_VENV_DIR_NAME_IN_PROJECT, PVX_VENV_IN_PROJECT, PVX_VENV_PATH
-from handler.venv import richVenvTable, venvHandler
-from tools.rich_pvx_console import console, pvx_hint_color
+from pvx.env import PVX_VENV_DIR_NAME_IN_PROJECT, PVX_VENV_IN_PROJECT, PVX_VENV_PATH
+from pvx.handler.venv import richVenvTable, venvHandler
+from pvx.tools.rich_pvx_console import console, pvx_hint_color
 
-import commands.venv_help as help
+import pvx.commands.venv_help as help
 
 
 @click.command("list")

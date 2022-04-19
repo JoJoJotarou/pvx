@@ -1,14 +1,14 @@
 import click
-from env import (
+from pvx.env import (
     PVX_PYTHON_INSTALLATION_PATH,
     PY_BUILD_ARCHIVE_PATH,
     PY_BUILD_BIN_PATH,
     join_path,
 )
-from handler.py import PyInstallationStatus, pyHandler
-from tools.rich_pvx_console import console
+from pvx.handler.py import PyInstallationStatus, pyHandler
+from pvx.tools.rich_pvx_console import console
 
-import commands.py_help as help
+import pvx.commands.py_help as help
 
 
 @click.command("install")

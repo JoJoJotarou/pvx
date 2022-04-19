@@ -1,11 +1,11 @@
 import os
 
 import click
-from env import PY_BUILD_ARCHIVE_PATH
-from handler.py import pyHandler
-from tools.rich_pvx_console import PvxConsole, console
+from pvx.env import PY_BUILD_ARCHIVE_PATH
+from pvx.handler.py import pyHandler
+from pvx.tools.rich_pvx_console import PvxConsole, console
 
-import commands.py_help as help
+import pvx.commands.py_help as help
 
 
 @click.command("archive")
