@@ -5,8 +5,6 @@ Python version &amp; venv management (maybe more ...)
 
 ![pvx-help](./asset/pvx-help.png)
 
-![pvx-commands-help](./asset/pvx-commands-help.png)
-
 ## 📦 Install
 
 - Use pipx (recommend)
