@@ -100,7 +100,7 @@ class GroupCommands(click.Group):
                 )
             )
         # PVX usage
-        console.print(" ".join([ctx.command_path, "[ARGS]", "[OPTIONS]", "\n"]))
+        console.print(" ".join([ctx.command_path, "COMMAND", "[OPTIONS]", "[ARGS]", "\n"]))
 
         # commands and options
         from rich import box
