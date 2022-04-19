@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: ${{ github.ref_name }}
+name: pvx publish
 
 on:
   push:
