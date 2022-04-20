@@ -3,18 +3,18 @@ import sys
 from pathlib import Path
 
 import click
+from pvx.commands import py_help
 from pvx.env import (
+    PVX_PY_BUILD_HOME,
     PVX_PYTHON_INSTALLATION_PATH,
-    PVX_VENV_PATH,
-    PVX_VENV_IN_PROJECT,
     PVX_VENV_DIR_NAME_IN_PROJECT,
+    PVX_VENV_IN_PROJECT,
+    PVX_VENV_PATH,
 )
 from pvx.handler.py import pyHandler
 from pvx.handler.venv import venvHandler
 from pvx.tools.rich_pvx_console import console, pvx_hint_color
 from pvx.tools.utils import join_path
-
-from pvx.commands import py_help
 
 
 def get_venv_dir_name(py_path) -> str:
@@ -111,6 +111,12 @@ def cli(
     else:
         # mean use python install by pvx or other(eg. pyenv)
         # check whether it has been installed
+        if not os.path.exists(PVX_PY_BUILD_HOME):
+            console.text("python-build is not installed, Try:").help(
+                py_help.py_python_build
+            ).print()
+            return
+
         if version_or_path not in pyHandler.list(PVX_PYTHON_INSTALLATION_PATH)[0]:
             console.text(
                 f"[{pvx_hint_color}]{version_or_path}[/] is not installed! Try install:"

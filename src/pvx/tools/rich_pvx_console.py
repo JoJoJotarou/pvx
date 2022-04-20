@@ -15,7 +15,7 @@ class PvxHighlighter(RegexHighlighter):
 
     base_style = "pvx."
     highlights = [
-        r"(?P<help>\`[\w|\s|\-|[|\]]+\`)",
+        r"(?P<help>\`.*\`)",
         # r"(?P<version>[.|\-|\w]*[1-9]\.[0-9][.|\-|\w]*)",
         r"(?P<version>[\w|\-|\.]*[1-9]\.[0-9][\w|\-|\.]*)",
     ]

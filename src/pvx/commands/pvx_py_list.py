@@ -1,3 +1,4 @@
+import os
 import click
 
 from pvx.tools.rich_pvx_console import console
@@ -9,6 +10,13 @@ from pvx.env import PVX_PYTHON_INSTALLATION_PATH
 @click.command("list")
 def cli():
     """A list of installed Python versions."""
+
+    if not os.path.exists(PVX_PYTHON_INSTALLATION_PATH):
+        console.text("Nothing found ~, Try installing one:").help(
+            help.py_install
+        ).print()
+        return
+
     installed, installed_broken = pyHandler.list(PVX_PYTHON_INSTALLATION_PATH)
     if len(installed) > 0:
         console.print("Installed versions:\n")

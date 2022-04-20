@@ -1,8 +1,10 @@
+import os
 import click
 from pvx.env import (
     PVX_PYTHON_INSTALLATION_PATH,
     PY_BUILD_ARCHIVE_PATH,
     PY_BUILD_BIN_PATH,
+    PVX_PY_BUILD_HOME,
     join_path,
 )
 from pvx.handler.py import PyInstallationStatus, pyHandler
@@ -26,6 +28,12 @@ import pvx.commands.py_help as help
 def cli(version: str, force: bool):
 
     """Install the specified version of Python."""
+
+    if not os.path.exists(PVX_PY_BUILD_HOME):
+        console.text("python-build is not installed, Try:").help(
+            help.py_python_build
+        ).print()
+        return
 
     py_path = join_path(PVX_PYTHON_INSTALLATION_PATH, version)
 
