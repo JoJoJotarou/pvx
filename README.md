@@ -1,4 +1,5 @@
 # 🐍 pvx
+
 Python version &amp; venv management (maybe more ...)
 
 ## 🤪 What can pvx do ?
@@ -7,17 +8,24 @@ Python version &amp; venv management (maybe more ...)
 
 ## 📦 Install
 
-- Use pipx (recommend)
+Use pipx (recommend)
 
     ```bash
     pipx install pvx
     ```
 
-- Use pip
+Or pip
 
     ```bash
     pip install pvx
     ```
+
+Don't forget [`python-build`](https://github.com/pyenv/pyenv/tree/master/plugins/python-build) and it [dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment).
+
+```bash
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+```
+[pyenv](https://github.com/pyenv/pyenv) is usually installed at `~/.pyenv` by default. If it is installed silently, then everything is ready, otherwise add `PVX_PY_BUILD_PATH=/your/pyenv/path/plugins/python-build` to `env` (`plugins/python-build` is usually fixed).
 
 ## 🔧 Usage
 
@@ -48,7 +56,7 @@ Python version &amp; venv management (maybe more ...)
     pvx py remove 3.10.4
     ```
 
-- Create a virtual environment (pvx use [Python Venv](https://docs.python.org/3/tutorial/venv.html))
+- Create a virtual environment (pvx use [Python Venv](https://docs.python.org/3/tutorial/venv.html) and compatible with its parameters)
 
     ```bash
     # All default (current python and default venv prompt)
@@ -88,6 +96,15 @@ Python version &amp; venv management (maybe more ...)
     pvx venv remove prompt_name
     ```
 
+## Optional environment variable
+
+- `PVX_ROOT_PATH`: pvx home path. `Default: ~/.pvx`
+- `PVX_PYTHON_INSTALLATION_PATH`: The installation folder for Python. `Default: ~/${PVX_ROOT_PATH}/versions`
+- `PVX_VENV_IN_PROJECT`: Whether the virtual environment is installed in the project. `Default: true`
+- `PVX_VENV_DIR_NAME_IN_PROJECT`: The folder name of virtual environment. `Default: .venv`
+- `PVX_VENV_EXTERNAL_PATH`: If `PVX_VENV_IN_PROJECT` is false, the virtual environment is installed externally rather than in the project. `Default: ~/${PVX_ROOT_PATH}/venv`
+- `PVX_PY_BUILD_HOME`: pyenv plugin python-build home path. `Default: ~/.pyenv/plugins/python-build`
+
 ## 🌟 Extend functionality
 
 If you want to extend commands, be familiar with the following points.
@@ -100,6 +117,9 @@ If you want to extend commands, be familiar with the following points.
 
 ## 👻 Thanks
 
+pvx was my experiment after studying `pyenv`, `poetry` `rich` and `click`. Thank them for their efforts, fun 😁 ~
+
 - [python-build (pyenv's plugin)](https://github.com/pyenv/pyenv/tree/master/plugins/python-build), which pvx depend to install different versions of Python
+- [poetry](https://github.com/python-poetry/poetry)
 - [rich](https://github.com/Textualize/rich), a Python library for rich text and beautiful formatting in the terminal.
 - [click](https://github.com/pallets/click), a python composable command line interface toolkit
