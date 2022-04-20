@@ -10,15 +10,15 @@ Python version &amp; venv management (maybe more ...)
 
 Use pipx (recommend)
 
-    ```bash
-    pipx install pvx
-    ```
+```bash
+pipx install pvx
+```
 
 Or pip
 
-    ```bash
-    pip install pvx
-    ```
+```bash
+pip install pvx
+```
 
 Don't forget [`python-build`](https://github.com/pyenv/pyenv/tree/master/plugins/python-build) and it [dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment).
 

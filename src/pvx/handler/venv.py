@@ -61,7 +61,7 @@ class Venv(object):
         return my_table
 
     def _is_activate(self):
-        from env import variable
+        from pvx.env import variable
 
         if variable("VIRTUAL_ENV") and variable("VIRTUAL_ENV") == self.path:
             return True
